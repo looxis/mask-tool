@@ -7,7 +7,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name MaskTool ./src/components/MaskTool.vue"
+    "build-bundle-lib": "vue-cli-service build --target lib --name MaskTool ./src/components/MaskTool.vue",
+    "build-bundle-component": "vue-cli-service build --target wc --name Mask-Tool ./src/components/MaskTool.vue"
   },
   "dependencies": {
     "buefy": "^0.8.18",
