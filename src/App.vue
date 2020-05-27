@@ -3,7 +3,7 @@
         <mask-tool ref="maskTool" @export="handleMaskToolExport"
                    src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg"></mask-tool>
 
-        <button @click="$refs.maskTool.export()" class="button is-primary">
+        <button @click="$refs.maskTool.createExport()" class="button is-primary">
             Export
         </button>
     </div>

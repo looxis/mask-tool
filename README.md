@@ -27,7 +27,7 @@ Required: `true`<br>
 ### to get result image:
 #### - set `ref` to MaskTool component
 #### - set listener for `@export` event
-#### - call: `$refs.maskTool.export()`
+#### - call: `$refs.maskTool.createExport()`
 #### - resulting image passing to your `@export` event listener as Blob object
 
 ```

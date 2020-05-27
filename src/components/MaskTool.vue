@@ -54,6 +54,27 @@
                 </div>
             </div>
         </div>
+        <footer class="modal-card-foot">
+            <div class="field is-grouped">
+                <div class="control">
+                    <button @click="undo()"
+                            class="button"
+                            :disabled="!canUndo">Undo
+                    </button>
+                </div>
+                <div class="control">
+                    <button class="button"
+                            @click="reset()"
+                            :disabled="!canUndo">Reset All
+                    </button>
+                </div>
+                <div class="control">
+                    <button @click="createExport()"
+                            class="button is-primary">Upload
+                    </button>
+                </div>
+            </div>
+        </footer>
     </div>
 </template>
 
@@ -204,7 +225,7 @@
                 this.paperScope.project.activeLayer.removeChildren(1); //TODO the first is image, need to check types here
                 this.paperScope.view.draw();
             },
-            async export() {
+            async createExport() {
                 let clippingBox = new this.paperScope.Path.Rectangle(
                     this.baseRaster.bounds
                 );
